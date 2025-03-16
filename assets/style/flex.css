@@ -1,0 +1,135 @@
+/*cabeçalho*/
+
+.menu{
+    display: flex; /*permite aplicação de flex box nos elementos*/
+    justify-content: space-evenly; /*aplica espaçamento entre os elementos*/
+    align-items: center; /*alinha os itens no centro*/
+    flex-wrap: wrap; /*quando não tem mais espaço ele quebra o elemento para proxima linha*/
+    column-gap: 33px; /*é utilizada para aplicar distância no sentido horizontal e vertical entre elementos em um layout*/
+
+}
+
+/*categoria*/
+
+.categorias__lista{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+/*destaques*/
+
+.destaques{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.destaques__barra{
+    flex-grow: 1;
+}
+
+/* eventos */
+
+.eventos__lista{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.eventos__item{
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+/*agenda*/
+
+.agenda__lista{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.agenda__item{
+    flex-grow: 1;
+}
+
+@media (min-width: 720px ) {
+    
+    /*cabeçalho*/
+
+    .menu{
+        column-gap: 75px;
+    }
+
+    /*categoria*/
+
+    .categorias__lista{
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+
+    }
+
+    .eventos__lista{
+        justify-content: end;
+    }
+
+    .agenda__lista{
+        justify-content: end;
+    }
+
+}
+
+/*rodapé*/
+
+.rodape{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.rodape__logo{
+    align-self: end;
+}
+
+@media (min-width: 1440px){
+
+    /*cabeçalho*/
+
+    .menu{
+        column-gap: 105px;
+        flex-wrap: nowrap;
+    }
+
+    .menu__item:nth-child(1){
+        order: 1;
+    }
+
+    .menu__item:nth-child(2){
+        order: 3;    
+
+    }
+
+    .menu__item:nth-child(3){
+        order: 4;    
+
+    }
+
+    .menu__item:nth-child(4){
+        order: 5;    
+
+    }
+
+    .menu__item:nth-child(5){
+        order: 2;    
+
+    }
+
+}
+
